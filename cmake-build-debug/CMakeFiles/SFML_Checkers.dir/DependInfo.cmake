@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/sashkoshel/SFML_Checkers/Checker.cpp" "/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles/SFML_Checkers.dir/Checker.cpp.o"
+  "/Users/sashkoshel/SFML_Checkers/Object.cpp" "/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles/SFML_Checkers.dir/Object.cpp.o"
+  "/Users/sashkoshel/SFML_Checkers/PlayField.cpp" "/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o"
   "/Users/sashkoshel/SFML_Checkers/main.cpp" "/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles/SFML_Checkers.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

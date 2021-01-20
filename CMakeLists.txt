@@ -10,6 +10,6 @@ include_directories("SFML/include")
 
 #find_package(SFML 2.5.1 COMPONENTS system window graphics network audio)
 
-add_executable(SFML_Checkers main.cpp)
+add_executable(SFML_Checkers main.cpp Object.cpp Object.h Checker.cpp Checker.h PlayField.cpp PlayField.h)
 
 target_link_libraries (SFML_Checkers sfml-graphics sfml-window sfml-system)

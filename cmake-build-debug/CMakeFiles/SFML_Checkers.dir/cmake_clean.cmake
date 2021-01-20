@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SFML_Checkers.dir/Checker.cpp.o"
+  "CMakeFiles/SFML_Checkers.dir/Object.cpp.o"
+  "CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o"
   "CMakeFiles/SFML_Checkers.dir/main.cpp.o"
   "SFML_Checkers"
   "SFML_Checkers.pdb"

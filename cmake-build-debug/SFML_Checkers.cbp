@@ -82,6 +82,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/sashkoshel/SFML_Checkers/Checker.cpp">
+			<Option target="SFML_Checkers"/>
+		</Unit>
+		<Unit filename="/Users/sashkoshel/SFML_Checkers/Checker.h">
+			<Option target="SFML_Checkers"/>
+		</Unit>
+		<Unit filename="/Users/sashkoshel/SFML_Checkers/Object.cpp">
+			<Option target="SFML_Checkers"/>
+		</Unit>
+		<Unit filename="/Users/sashkoshel/SFML_Checkers/Object.h">
+			<Option target="SFML_Checkers"/>
+		</Unit>
+		<Unit filename="/Users/sashkoshel/SFML_Checkers/PlayField.cpp">
+			<Option target="SFML_Checkers"/>
+		</Unit>
+		<Unit filename="/Users/sashkoshel/SFML_Checkers/PlayField.h">
+			<Option target="SFML_Checkers"/>
+		</Unit>
 		<Unit filename="/Users/sashkoshel/SFML_Checkers/main.cpp">
 			<Option target="SFML_Checkers"/>
 		</Unit>

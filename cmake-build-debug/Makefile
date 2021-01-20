@@ -143,6 +143,87 @@ SFML_Checkers/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/build
 .PHONY : SFML_Checkers/fast
 
+Checker.o: Checker.cpp.o
+
+.PHONY : Checker.o
+
+# target to build an object file
+Checker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/Checker.cpp.o
+.PHONY : Checker.cpp.o
+
+Checker.i: Checker.cpp.i
+
+.PHONY : Checker.i
+
+# target to preprocess a source file
+Checker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/Checker.cpp.i
+.PHONY : Checker.cpp.i
+
+Checker.s: Checker.cpp.s
+
+.PHONY : Checker.s
+
+# target to generate assembly for a file
+Checker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/Checker.cpp.s
+.PHONY : Checker.cpp.s
+
+Object.o: Object.cpp.o
+
+.PHONY : Object.o
+
+# target to build an object file
+Object.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/Object.cpp.o
+.PHONY : Object.cpp.o
+
+Object.i: Object.cpp.i
+
+.PHONY : Object.i
+
+# target to preprocess a source file
+Object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/Object.cpp.i
+.PHONY : Object.cpp.i
+
+Object.s: Object.cpp.s
+
+.PHONY : Object.s
+
+# target to generate assembly for a file
+Object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/Object.cpp.s
+.PHONY : Object.cpp.s
+
+PlayField.o: PlayField.cpp.o
+
+.PHONY : PlayField.o
+
+# target to build an object file
+PlayField.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o
+.PHONY : PlayField.cpp.o
+
+PlayField.i: PlayField.cpp.i
+
+.PHONY : PlayField.i
+
+# target to preprocess a source file
+PlayField.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/PlayField.cpp.i
+.PHONY : PlayField.cpp.i
+
+PlayField.s: PlayField.cpp.s
+
+.PHONY : PlayField.s
+
+# target to generate assembly for a file
+PlayField.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFML_Checkers.dir/build.make CMakeFiles/SFML_Checkers.dir/PlayField.cpp.s
+.PHONY : PlayField.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +260,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SFML_Checkers"
+	@echo "... Checker.o"
+	@echo "... Checker.i"
+	@echo "... Checker.s"
+	@echo "... Object.o"
+	@echo "... Object.i"
+	@echo "... Object.s"
+	@echo "... PlayField.o"
+	@echo "... PlayField.i"
+	@echo "... PlayField.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
