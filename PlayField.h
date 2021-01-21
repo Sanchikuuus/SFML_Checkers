@@ -7,21 +7,35 @@
 
 #include "Checker.h"
 #include "Object.h"
-#include "list"
+#include "map"
 
 //class Checker();
 
 class PlayField : public Object {
 
-    std::list<Checker> m_checkers_red;
-    std::list<Checker> m_checkers_white;
+    std::map<std::string, Checker*> m_checkers;
+    sf::Vector2<float> m_scale;
+
+    std::string field[8][8] {
+            {"", "1", "", "1", "", "1", "", "1"},
+            {"1", "", "1", "", "1", "", "1", ""},
+            {"", "1", "", "1", "", "1", "", "1"},
+            {"", "", "", "", "", "", "", ""},
+            {"", "", "", "", "", "", "", ""},
+            {"2", "", "2", "", "2", "", "2", ""},
+            {"", "2", "", "2", "", "2", "", "2"},
+            {"2", "", "2", "", "2", "", "2", ""},
+    };
 
 public:
     PlayField();
     ~PlayField();
 
     void Fill();
-    std::list<Checker> GetList(std::string player) ;
+//    std::list<Checker*> GetList(std::string player) ;
+    void DrawAt(sf::RenderWindow &target);
+
+    Checker* GetObjectWithName(const std::string& name);
 };
 
 

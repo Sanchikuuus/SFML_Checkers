@@ -4,6 +4,6 @@
 
 #include "Checker.h"
 
-Checker::Checker(std::string player, float x, float y, sf::Vector2<float> scale) : Object("textures/checker"+player+".png", x, y, scale) {
+Checker::Checker(std::string name, std::string player, float x, float y, sf::Vector2<float> scale) : Object(name, "textures/checker"+player+".png", x, y, scale) {
 
 }

@@ -1,21 +1,22 @@
 #include "iostream"
 #include <SFML/Graphics.hpp>
-#include "Object.h"
-#include "Checker.h"
 #include "PlayField.h"
 using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1024, 1024), "Checkers");
+    const float windowSize = 800.0;
+
+    sf::RenderWindow window(sf::VideoMode(windowSize, windowSize), "Checkers");
+    window.setFramerateLimit(60);
 
     PlayField board;
 
+    sf::Vector2<float> scale(windowSize/1800.0f, windowSize/1800.0f);
+
+    board.SetScale(scale);
+
     board.Fill();
-
-    board.SetScale(sf::Vector2<float>(1024/1800.0, 1024/1800.0));
-
-    Checker ch1("Red", 50, 50, board.GetScele());
 
     while (window.isOpen())
 	{
@@ -35,15 +36,8 @@ int main()
 
 		window.clear();
 		window.draw(board.GetSprite());
-//		window.draw(ch1.GetSprite());
 
-
-//		for(Checker* checker : board.GetList("Red")) {
-//            window.draw(checker->GetSprite());
-//		}
-//		for(Checker* checker : board.GetList("White")) {
-//            window.draw(checker->GetSprite());
-//		}
+        board.DrawAt(window);
 
 		window.display();
 	}
