@@ -20,30 +20,32 @@ void PlayField::Fill() {
     sf::Vector2<float> scaleVector = this->GetScale();
     float scale = scaleVector.x;
 
+    const int squareSize = 203;
+
     int redCounter = 0;
     int whiteCounter = 0;
-    for(auto & i : field) {
-        for(auto & k : i) {
+    for(int i = 0; i < 8; ++i) {
+        for(int k = 0; k < 8; ++k) {
             std::string player;
             int counter = 0;
-            if(k == "1") {
+            if(field[i][k] == "1") {
                 player = "Red";
                 redCounter++;
                 counter = redCounter;
-            } else if (k == "2") {
+            } else if (field[i][k]  == "2") {
                 player = "White";
                 whiteCounter++;
                 counter = whiteCounter;
             } else
                 continue;
             auto *ch = new Checker( player + "_" + std::to_string(counter), player,
-                                    scale * 100 * counter / 2 , scale * 100 * counter / 2, scaleVector );
-            k = ch->GetName();
-            m_checkers.insert({k, ch});
+                                    (squareSize * (k+1) - 95 ) * scale , (squareSize * (i+1) - 95 ) * scale,
+                                    scaleVector );
+            field[i][k]  = ch->GetName();
+            m_checkers.insert({field[i][k] , ch});
         }
     }
 }
-
 
 void PlayField::DrawAt(sf::RenderWindow &target) {
 
