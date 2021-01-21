@@ -23,23 +23,27 @@ int main()
         sf::Event event;
 		while (window.pollEvent(event))
 		{
-//		    std::cout << event.type << std::endl;
 			if (event.type == sf::Event::Closed)
 				window.close();
+            if (event.type == sf::Event::LostFocus)
+            {
+                board.SetColor(sf::Color(111, 111, 111, 111));
+                board.Update(window);
+
+                while(true)
+                {
+                    window.pollEvent(event);
+                    if (event.type == sf::Event::GainedFocus)
+                    {
+                        board.SetColor(sf::Color(255, 255, 255, 255));
+                        break;
+                    }
+                }
+            }
 		}
-		if (event.type == sf::Event::LostFocus) {
-		    while(window.pollEvent(event)) {
-                if (event.type == sf::Event::GainedFocus)
-                    break;
-		    }
-		}
 
-		window.clear();
-		window.draw(board.GetSprite());
+        board.Update(window);
 
-        board.DrawAt(window);
-
-		window.display();
 	}
 
 	return 0;

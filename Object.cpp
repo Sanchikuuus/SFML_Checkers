@@ -37,3 +37,6 @@ sf::Vector2<float> Object::GetScale() {
 std::string Object::GetName(){
     return m_name;
 }
+ void Object::SetColor(sf::Color color) {
+    this->GetSprite().setColor(color);
+}

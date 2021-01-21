@@ -9,8 +9,10 @@
 #include "string"
 
 class Checker: public Object {
+    int m_row;
+    int m_column;
 public:
-    Checker(std::string name, std::string player, float x = 0, float y = 0, sf::Vector2<float> scale = sf::Vector2<float>(1, 1));
+    Checker(std::string name, std::string player, int row, int column, float x = 0, float y = 0, sf::Vector2<float> scale = sf::Vector2<float>(1, 1));
 };
 
 

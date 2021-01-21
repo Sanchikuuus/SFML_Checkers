@@ -38,7 +38,7 @@ void PlayField::Fill() {
                 counter = whiteCounter;
             } else
                 continue;
-            auto *ch = new Checker( player + "_" + std::to_string(counter), player,
+            auto *ch = new Checker( player + "_" + std::to_string(counter), player, k, i,
                                     (squareSize * (k+1) - 95 ) * scale , (squareSize * (i+1) - 95 ) * scale,
                                     scaleVector );
             field[i][k]  = ch->GetName();
@@ -57,4 +57,36 @@ void PlayField::DrawAt(sf::RenderWindow &target) {
 Checker *PlayField::GetObjectWithName(const std::string& name) {
     return m_checkers["name"];
 }
+
+void PlayField::SetColor(sf::Color color) {
+    this->GetSprite().setColor(color);
+    for(const auto& ch : m_checkers) {
+        ch.second->SetColor(color);
+    }
+}
+
+void PlayField::Update(sf::RenderWindow &target) {
+
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+    {
+        for(const auto& ch : m_checkers)
+        {
+            sf::Vector2<int> mousePos = sf::Mouse::getPosition(target);
+            if (ch.second->GetSprite().getGlobalBounds().contains(mousePos.x, mousePos.y))
+            {
+//                ch.second->GetSprite().setPosition(mousePos.x, mousePos.y);
+//                ch.second->GetSprite().move;
+            }
+        }
+    }
+
+    target.clear();
+    target.draw(GetSprite());
+
+    DrawAt(target);
+
+    target.display();
+}
+
+
 

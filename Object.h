@@ -25,6 +25,7 @@ public:
     void SetScale(sf::Vector2<float>);
     sf::Vector2<float> GetScale();
     std::string GetName();
+    void SetColor(sf::Color color);
 };
 
 

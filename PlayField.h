@@ -34,8 +34,10 @@ public:
     void Fill();
 //    std::list<Checker*> GetList(std::string player) ;
     void DrawAt(sf::RenderWindow &target);
+    void Update(sf::RenderWindow &target);
 
     Checker* GetObjectWithName(const std::string& name);
+    void SetColor(sf::Color color);
 };
 
 
