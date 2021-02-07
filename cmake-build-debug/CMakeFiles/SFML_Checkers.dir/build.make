@@ -80,54 +80,54 @@ include CMakeFiles/SFML_Checkers.dir/flags.make
 CMakeFiles/SFML_Checkers.dir/main.cpp.o: CMakeFiles/SFML_Checkers.dir/flags.make
 CMakeFiles/SFML_Checkers.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SFML_Checkers.dir/main.cpp.o"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/main.cpp.o -c /Users/sashkoshel/SFML_Checkers/main.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/main.cpp.o -c /Users/sashkoshel/SFML_Checkers/main.cpp
 
 CMakeFiles/SFML_Checkers.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML_Checkers.dir/main.cpp.i"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/main.cpp > CMakeFiles/SFML_Checkers.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/main.cpp > CMakeFiles/SFML_Checkers.dir/main.cpp.i
 
 CMakeFiles/SFML_Checkers.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML_Checkers.dir/main.cpp.s"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/main.cpp -o CMakeFiles/SFML_Checkers.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/main.cpp -o CMakeFiles/SFML_Checkers.dir/main.cpp.s
 
 CMakeFiles/SFML_Checkers.dir/Object.cpp.o: CMakeFiles/SFML_Checkers.dir/flags.make
 CMakeFiles/SFML_Checkers.dir/Object.cpp.o: ../Object.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SFML_Checkers.dir/Object.cpp.o"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/Object.cpp.o -c /Users/sashkoshel/SFML_Checkers/Object.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/Object.cpp.o -c /Users/sashkoshel/SFML_Checkers/Object.cpp
 
 CMakeFiles/SFML_Checkers.dir/Object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML_Checkers.dir/Object.cpp.i"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/Object.cpp > CMakeFiles/SFML_Checkers.dir/Object.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/Object.cpp > CMakeFiles/SFML_Checkers.dir/Object.cpp.i
 
 CMakeFiles/SFML_Checkers.dir/Object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML_Checkers.dir/Object.cpp.s"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/Object.cpp -o CMakeFiles/SFML_Checkers.dir/Object.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/Object.cpp -o CMakeFiles/SFML_Checkers.dir/Object.cpp.s
 
 CMakeFiles/SFML_Checkers.dir/Checker.cpp.o: CMakeFiles/SFML_Checkers.dir/flags.make
 CMakeFiles/SFML_Checkers.dir/Checker.cpp.o: ../Checker.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SFML_Checkers.dir/Checker.cpp.o"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/Checker.cpp.o -c /Users/sashkoshel/SFML_Checkers/Checker.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/Checker.cpp.o -c /Users/sashkoshel/SFML_Checkers/Checker.cpp
 
 CMakeFiles/SFML_Checkers.dir/Checker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML_Checkers.dir/Checker.cpp.i"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/Checker.cpp > CMakeFiles/SFML_Checkers.dir/Checker.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/Checker.cpp > CMakeFiles/SFML_Checkers.dir/Checker.cpp.i
 
 CMakeFiles/SFML_Checkers.dir/Checker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML_Checkers.dir/Checker.cpp.s"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/Checker.cpp -o CMakeFiles/SFML_Checkers.dir/Checker.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/Checker.cpp -o CMakeFiles/SFML_Checkers.dir/Checker.cpp.s
 
 CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o: CMakeFiles/SFML_Checkers.dir/flags.make
 CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o: ../PlayField.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sashkoshel/SFML_Checkers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o -c /Users/sashkoshel/SFML_Checkers/PlayField.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFML_Checkers.dir/PlayField.cpp.o -c /Users/sashkoshel/SFML_Checkers/PlayField.cpp
 
 CMakeFiles/SFML_Checkers.dir/PlayField.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFML_Checkers.dir/PlayField.cpp.i"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/PlayField.cpp > CMakeFiles/SFML_Checkers.dir/PlayField.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sashkoshel/SFML_Checkers/PlayField.cpp > CMakeFiles/SFML_Checkers.dir/PlayField.cpp.i
 
 CMakeFiles/SFML_Checkers.dir/PlayField.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFML_Checkers.dir/PlayField.cpp.s"
-	/Volumes/Ex/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/PlayField.cpp -o CMakeFiles/SFML_Checkers.dir/PlayField.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sashkoshel/SFML_Checkers/PlayField.cpp -o CMakeFiles/SFML_Checkers.dir/PlayField.cpp.s
 
 # Object files for target SFML_Checkers
 SFML_Checkers_OBJECTS = \

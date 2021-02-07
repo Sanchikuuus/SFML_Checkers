@@ -25,6 +25,8 @@ int main()
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
+			if (event.type == sf::Event::MouseButtonPressed)
+			    board.OnMouseDown(window);
             if (event.type == sf::Event::LostFocus)
             {
                 board.SetColor(sf::Color(111, 111, 111, 111));

@@ -67,19 +67,6 @@ void PlayField::SetColor(sf::Color color) {
 
 void PlayField::Update(sf::RenderWindow &target) {
 
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-    {
-        for(const auto& ch : m_checkers)
-        {
-            sf::Vector2<int> mousePos = sf::Mouse::getPosition(target);
-            if (ch.second->GetSprite().getGlobalBounds().contains(mousePos.x, mousePos.y))
-            {
-//                ch.second->GetSprite().setPosition(mousePos.x, mousePos.y);
-//                ch.second->GetSprite().move;
-            }
-        }
-    }
-
     target.clear();
     target.draw(GetSprite());
 
@@ -88,5 +75,14 @@ void PlayField::Update(sf::RenderWindow &target) {
     target.display();
 }
 
+void PlayField::OnMouseDown(sf::RenderWindow &target) {
+    for(const auto& ch : m_checkers)
+    {
+        sf::Vector2<int> mousePos = sf::Mouse::getPosition(target);
 
+        if (ch.first.find(m_turn) == 0 && ch.second->GetSprite().getGlobalBounds().contains(mousePos.x, mousePos.y))
+        {
 
+        }
+    }
+}
