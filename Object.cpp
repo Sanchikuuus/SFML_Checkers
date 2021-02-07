@@ -11,9 +11,11 @@ Object::Object(std::string name, std::string path, float x, float y, sf::Vector2
                                                         m_scale(scale),
                                                         m_name(name)
 {
-    m_texture.loadFromFile(m_texturePath);
-    m_sprite.setTexture(m_texture);
-    m_sprite.setPosition(x, y);
+    if (m_texturePath != "") {
+        m_texture.loadFromFile(m_texturePath);
+        m_sprite.setTexture(m_texture);
+        m_sprite.setPosition(x, y);
+    }
     SetScale(m_scale);
 }
 

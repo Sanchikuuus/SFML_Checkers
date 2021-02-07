@@ -8,32 +8,28 @@
 #include "Checker.h"
 #include "Object.h"
 #include "map"
+#include "array"
+#include <random>
 #include "iostream"
 
 //class Checker();
 
 class PlayField : public Object {
 
+
     std::map<std::string, Checker*> m_checkers;
     sf::Vector2<float> m_scale;
-    std::string m_turn = "White";
+//    std::string m_turn = "White";
 
-    std::string field[8][8] {
-            {"", "1", "", "1", "", "1", "", "1"},
-            {"1", "", "1", "", "1", "", "1", ""},
-            {"", "1", "", "1", "", "1", "", "1"},
-            {"", "", "", "", "", "", "", ""},
-            {"", "", "", "", "", "", "", ""},
-            {"2", "", "2", "", "2", "", "2", ""},
-            {"", "2", "", "2", "", "2", "", "2"},
-            {"2", "", "2", "", "2", "", "2", ""},
-    };
+    std::string m_field[4][4];
 
 public:
     PlayField();
+    PlayField(std::string name);
     ~PlayField();
 
     void Fill();
+    void Shuffle();
 //    std::list<Checker*> GetList(std::string player) ;
     void DrawAt(sf::RenderWindow &target);
     void Update(sf::RenderWindow &target);
@@ -41,6 +37,8 @@ public:
 
     Checker* GetObjectWithName(const std::string& name);
     void SetColor(sf::Color color);
+    bool IsCellEmpty(int x, int y, sf::Vector2<int> pos);
+    void MoveChecker(Checker *ch, int x, int y, sf::Vector2<int> pos);
 };
 
 

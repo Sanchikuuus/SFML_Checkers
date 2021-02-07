@@ -4,7 +4,13 @@
 
 #include "PlayField.h"
 
+#include <utility>
+
 PlayField::PlayField() : Object("PlayField", "textures/board.jpg"){
+
+}
+
+PlayField::PlayField(std::string name) : Object(std::move(name), "") {
 
 }
 
@@ -15,54 +21,65 @@ PlayField::~PlayField() {
     }
 }
 
+void PlayField::Shuffle() {
+
+    std::array<std::string, 15> names;
+    for (int i = 1; i < 16; ++i )
+        names[i-1] = std::to_string(i);
+
+    std::random_device rd; // https://en.cppreference.com/w/cpp/algorithm/random_shuffle
+    std::mt19937 g(rd());
+    std::shuffle(names.begin(), names.end(), g);
+
+    for (int i = 0; i < 4; ++i)
+    {
+        for (int k = 0; k < 4; ++k)
+        {
+            if( (i * 4 + k) > 14)
+            {
+                m_field[i][k] = "";
+                break;
+            }
+            m_field[i][k] = names[i * 4 + k];
+        }
+    }
+}
+
 void PlayField::Fill() {
 
     sf::Vector2<float> scaleVector = this->GetScale();
-    float scale = scaleVector.x;
+    const int squareSize = 200;
+    int scale = scaleVector.x;
 
-    const int squareSize = 203;
+    Shuffle();
 
-    int redCounter = 0;
-    int whiteCounter = 0;
-    for(int i = 0; i < 8; ++i) {
-        for(int k = 0; k < 8; ++k) {
-            std::string player;
-            int counter = 0;
-            if(field[i][k] == "1") {
-                player = "Red";
-                redCounter++;
-                counter = redCounter;
-            } else if (field[i][k]  == "2") {
-                player = "White";
-                whiteCounter++;
-                counter = whiteCounter;
-            } else
-                continue;
-            auto *ch = new Checker( player + "_" + std::to_string(counter), player, k, i,
-                                    (squareSize * (k+1) - 95 ) * scale , (squareSize * (i+1) - 95 ) * scale,
-                                    scaleVector );
-            field[i][k]  = ch->GetName();
-            m_checkers.insert({field[i][k] , ch});
+    for(int i = 0; i < 4; ++i)
+    {
+        for(int k = 0; k < 4; ++k)
+        {
+            if( (i * 4 + k) > 14)
+                break;
+            auto *ch = new Checker( m_field[i][k], k, i,
+                                        (squareSize * (k)) * scale , (squareSize * i) * scale,
+                                        scaleVector );
+            m_checkers.insert({m_field[k][i] , ch});
         }
     }
 }
 
 void PlayField::DrawAt(sf::RenderWindow &target) {
-
-    for(const auto& ch : m_checkers) {
+    for(const auto& ch : m_checkers)
         target.draw(ch.second->GetSprite());
-    }
 }
 
 Checker *PlayField::GetObjectWithName(const std::string& name) {
-    return m_checkers["name"];
+    return m_checkers[name];
 }
 
 void PlayField::SetColor(sf::Color color) {
     this->GetSprite().setColor(color);
-    for(const auto& ch : m_checkers) {
+    for(const auto& ch : m_checkers)
         ch.second->SetColor(color);
-    }
 }
 
 void PlayField::Update(sf::RenderWindow &target) {
@@ -80,9 +97,39 @@ void PlayField::OnMouseDown(sf::RenderWindow &target) {
     {
         sf::Vector2<int> mousePos = sf::Mouse::getPosition(target);
 
-        if (ch.first.find(m_turn) == 0 && ch.second->GetSprite().getGlobalBounds().contains(mousePos.x, mousePos.y))
+        if (ch.second->GetSprite().getGlobalBounds().contains(mousePos.x, mousePos.y))
         {
+            sf::Vector2<int> pos = ch.second->GetPosition();
 
+            if ( IsCellEmpty(-1, 0, pos)) // look left
+            {
+                MoveChecker(ch.second, -1, 0, pos);
+            } else if ( IsCellEmpty(1, 0, pos)) // look right
+            {
+                MoveChecker(ch.second, 1, 0, pos);
+            } else if (IsCellEmpty(0, -1, pos))  // look up
+            {
+                MoveChecker(ch.second, 0, -1, pos);
+            } else if (IsCellEmpty(0, 1, pos))  // look down
+            {
+                MoveChecker(ch.second, 0, 1, pos);
+            } else {
+
+            }
         }
     }
 }
+
+bool PlayField::IsCellEmpty(int x, int y, sf::Vector2<int> pos) {
+    if ( ((pos.x+x) < 0) || ((pos.x+x) > 3) || ((pos.y+y) < 0) || ((pos.y+y) > 3) )
+        return false;
+    return m_field[pos.x+x][pos.y+y].empty();
+}
+
+void PlayField::MoveChecker(Checker *ch, int x, int y, sf::Vector2<int> pos) {
+    ch->SetPosition(pos.x+x, pos.y+y);
+    m_field[pos.x][pos.y] = "";
+    m_field[pos.x+x][pos.y+y] = ch->GetName();
+}
+
+

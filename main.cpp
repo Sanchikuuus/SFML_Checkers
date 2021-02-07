@@ -7,14 +7,14 @@ int main()
 {
     const float windowSize = 800.0;
 
-    sf::RenderWindow window(sf::VideoMode(windowSize, windowSize), "Checkers");
+    sf::RenderWindow window(sf::VideoMode(windowSize, windowSize), "15 puzzle");
     window.setFramerateLimit(60);
 
-    PlayField board;
+    PlayField board("15");
 
-    sf::Vector2<float> scale(windowSize/1800.0f, windowSize/1800.0f);
+//    sf::Vector2<float> scale(windowSize/1800.0f, windowSize/1800.0f);
 
-    board.SetScale(scale);
+//    board.SetScale(scale);
 
     board.Fill();
 

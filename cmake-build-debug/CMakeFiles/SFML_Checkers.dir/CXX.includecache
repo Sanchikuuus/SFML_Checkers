@@ -688,10 +688,6 @@ SFML/Graphics.hpp
 string
 /Users/sashkoshel/SFML_Checkers/string
 
-/Users/sashkoshel/SFML_Checkers/PlayField.cpp
-PlayField.h
-/Users/sashkoshel/SFML_Checkers/PlayField.h
-
 /Users/sashkoshel/SFML_Checkers/PlayField.h
 Checker.h
 /Users/sashkoshel/SFML_Checkers/Checker.h
@@ -699,6 +695,18 @@ Object.h
 /Users/sashkoshel/SFML_Checkers/Object.h
 map
 /Users/sashkoshel/SFML_Checkers/map
+array
+/Users/sashkoshel/SFML_Checkers/array
+random
+-
 iostream
 /Users/sashkoshel/SFML_Checkers/iostream
+
+/Users/sashkoshel/SFML_Checkers/main.cpp
+iostream
+/Users/sashkoshel/SFML_Checkers/iostream
+SFML/Graphics.hpp
+-
+PlayField.h
+/Users/sashkoshel/SFML_Checkers/PlayField.h
 
